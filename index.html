@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="html" onclick="shootY()">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,18 +11,23 @@
 
 <body id="body">
     <div class="cup-row">
-        <img src="cup.png" />
-        <img src="cup.png" />
-        <img src="cup.png" />
+        <img src="cup.png" class="beerCup" />
+        <img src="cup.png" class="beerCup" />
+        <img src="cup.png" class="beerCup" />
     </div>
     <div class="cup-row">
-        <img src="cup.png" />
-        <img src="cup.png" />
+        <img src="cup.png" class="beerCup" />
+        <img src="cup.png" class="beerCup" />
     </div>
     <div class="cup-row">
-        <img src="cup.png" />
+        <img src="cup.png" class="beerCup" />
+    </div>
+    <div id="ellipse-div">
+        <svg class="ball" id="ball">
+        <ellipse cx="25" cy="25" rx="24" ry="24" />
+      </svg>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 
 </html>
