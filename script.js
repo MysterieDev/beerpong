@@ -1,6 +1,8 @@
 // PART 1 basics and shoot the ball
 const ball = document.querySelector("#ball");
 const ballDiv = document.querySelector("#ellipse-div");
+const actionBtn = document.querySelector("#actionButton");
+const actionBtnDiv = document.querySelector(".actionButtonStyle");
 const root = document.documentElement;
 const screenOffsetX = parseInt(offset(ball).left);
 
@@ -84,11 +86,14 @@ function evaluateShot() {
         .map((cup) => {
             cup.reference.outerHTML = "";
         });
+
+    showNextAction();
 }
 
 //Part 3 - restart
 
 function nextShot() {
+    actionBtnDiv.style = "display:none;";
     ball.style = "";
     ball.classList.remove("Shoot");
     ball.classList.add("shootY");
@@ -101,11 +106,27 @@ function doesRowStillHaveCups() {
         const remainingCups = el.querySelectorAll(".beerCup");
         if (remainingCups.length === 0) el.style = "padding-bottom:50px;";
     });
-} {}
+}
 
 function allCupsShot() {
     if (document.querySelectorAll(".beerCup").length === 0) {
         return true;
     }
     return false;
+}
+
+//Part 4 nextActions
+
+function showNextAction() {
+    if (allCupsShot()) {
+        actionBtn.onclick = refreshPage;
+        actionBtn.innerHTML = "Nächste Runde?";
+    } else {
+        actionBtn.onclick = nextShot;
+    }
+    actionBtnDiv.style = "display:block;";
+}
+
+function refreshPage() {
+    window.location.reload();
 }

@@ -107,3 +107,19 @@ ellipse {
         top: var(--topShot)
     }
 }
+
+
+/* Action Button*/
+
+.actionButtonStyle {
+    margin: 0 auto;
+    max-width: 200px;
+    padding-top: 30%;
+    display: none;
+}
+
+#actionButton {
+    background-color: orangered;
+    font-family: fantasy;
+    font-size: 2rem;
+}
