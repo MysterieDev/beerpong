@@ -43,7 +43,7 @@ ellipse {
 /*Animation*/
 
 .shootX {
-    animation: shootX 1.5s infinite linear;
+    animation: shootX 2s infinite linear;
 }
 
 @keyframes shootX {
