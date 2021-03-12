@@ -43,7 +43,7 @@ ellipse {
 /*Animation*/
 
 .shootX {
-    animation: shootX 2s infinite linear;
+    animation: shootX 1.5s infinite linear;
 }
 
 @keyframes shootX {
@@ -78,11 +78,6 @@ ellipse {
     100% {
         top: 0px
     }
-}
-
-.fadeAway {
-    animation: fadeAway 1s;
-    opacity: 0
 }
 
 @keyframes fadeAway {
